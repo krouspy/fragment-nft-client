@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import getWeb3 from "#root/getWeb3";
-import FragmentClaimerContract from "#contractAbis/FragmentClaimer";
+import FragmentClaimerContract from "#contractAbis/fragmentClaimer";
 
 import Header from "../Header";
 import Drawer from "../Drawer";
 import Home from "../Home";
 import Claim from "../Claim";
+import { fragmentClaimerAddress } from "#root/config/config";
 
 export const App = () => {
   const [data, setData] = useState({
     web3: null,
-    fragmentClaimer: null,
-    accounts: []
+    fragmentClaimer: null
   });
   const [open, setOpen] = useState(false);
 
@@ -20,14 +20,12 @@ export const App = () => {
     const init = async () => {
       try {
         const web3 = await getWeb3();
-        const accounts = await web3.eth.getAccounts();
-        const networkId = await web3.eth.net.getId();
-        const deployedNetwork = FragmentClaimerContract.networks[networkId];
+
         const fragmentClaimer = new web3.eth.Contract(
           FragmentClaimerContract.abi,
-          deployedNetwork && deployedNetwork.address
+          fragmentClaimerAddress
         );
-        setData({ web3, fragmentClaimer, accounts });
+        setData({ web3, fragmentClaimer });
       } catch (e) {
         console.log(e);
       }
