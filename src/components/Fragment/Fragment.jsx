@@ -42,7 +42,7 @@ export const Fragment = ({
       const url = `${serverURI}/api/fragment/${fragmentName}`;
       const tokenNumber = 24 * rowNumber + columnNumber + 1;
       const isClaimed = await fragmentClaimer.methods
-        .tokensClaimed(tokenNumber)
+        .tokensThatWereClaimed(tokenNumber)
         .call();
       setFragment({
         number: tokenNumber,
