@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../Layout";
+
+const style = {
+  marginTop: 100
+};
 
 export const Claim = () => {
   console.log(location);
-  return (
-    <Layout>
-      <h1>Claim Page</h1>
-    </Layout>
-  );
+
+  return <h1 style={style}>Claim Page</h1>;
 };

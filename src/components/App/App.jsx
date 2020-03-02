@@ -10,7 +10,9 @@ import Claim from "../Claim";
 import { fragmentClaimerAddress } from "#root/config/config";
 
 const style = {
-  flexGrow: 1
+  flexGrow: 1,
+  display: "flex",
+  justifyContent: "center"
 };
 
 export const App = () => {
