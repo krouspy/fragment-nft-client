@@ -325,10 +325,10 @@
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity ^0.5.0;\n\nimport \"../ERC721/IERC721.sol\";\n\n/**\n * @title ERC-721 Non-Fungible Token Standard, optional metadata extension\n * @dev See https://eips.ethereum.org/EIPS/eip-721\n */\ncontract IERC721Metadata is IERC721 {\n    function name() external view returns (string memory);\n    function symbol() external view returns (string memory);\n    function tokenURI(uint256 tokenId) external view returns (string memory);\n}\n",
-  "sourcePath": "/home/krouspy/project/fragment-nft/contracts/ERC721/ERC721Metadata/IERC721Metadata.sol",
+  "source": "pragma solidity ^0.5.0;\r\n\r\nimport \"../ERC721/IERC721.sol\";\r\n\r\n/**\r\n * @title ERC-721 Non-Fungible Token Standard, optional metadata extension\r\n * @dev See https://eips.ethereum.org/EIPS/eip-721\r\n */\r\ncontract IERC721Metadata is IERC721 {\r\n    function name() external view returns (string memory);\r\n    function symbol() external view returns (string memory);\r\n    function tokenURI(uint256 tokenId) external view returns (string memory);\r\n}\r\n",
+  "sourcePath": "C:\\Users\\klau\\Documents\\fragment-nft\\contracts\\ERC721\\ERC721Metadata\\IERC721Metadata.sol",
   "ast": {
-    "absolutePath": "/home/krouspy/project/fragment-nft/contracts/ERC721/ERC721Metadata/IERC721Metadata.sol",
+    "absolutePath": "/C/Users/klau/Documents/fragment-nft/contracts/ERC721/ERC721Metadata/IERC721Metadata.sol",
     "exportedSymbols": {
       "IERC721Metadata": [
         951
@@ -349,13 +349,13 @@
         "src": "0:23:4"
       },
       {
-        "absolutePath": "/home/krouspy/project/fragment-nft/contracts/ERC721/ERC721/IERC721.sol",
+        "absolutePath": "/C/Users/klau/Documents/fragment-nft/contracts/ERC721/ERC721/IERC721.sol",
         "file": "../ERC721/IERC721.sol",
         "id": 931,
         "nodeType": "ImportDirective",
         "scope": 952,
         "sourceUnit": 740,
-        "src": "25:31:4",
+        "src": "27:31:4",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -369,7 +369,7 @@
               "name": "IERC721",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 739,
-              "src": "220:7:4",
+              "src": "228:7:4",
               "typeDescriptions": {
                 "typeIdentifier": "t_contract$_IERC721_$739",
                 "typeString": "contract IERC721"
@@ -377,7 +377,7 @@
             },
             "id": 933,
             "nodeType": "InheritanceSpecifier",
-            "src": "220:7:4"
+            "src": "228:7:4"
           }
         ],
         "contractDependencies": [
@@ -385,7 +385,7 @@
           2995
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\n@dev See https://eips.ethereum.org/EIPS/eip-721",
+        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
         "fullyImplemented": false,
         "id": 951,
         "linearizedBaseContracts": [
@@ -409,7 +409,7 @@
               "id": 934,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "247:2:4"
+              "src": "256:2:4"
             },
             "returnParameters": {
               "id": 937,
@@ -421,7 +421,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 938,
-                  "src": "273:13:4",
+                  "src": "282:13:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -432,7 +432,7 @@
                     "id": 935,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "273:6:4",
+                    "src": "282:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -442,10 +442,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "272:15:4"
+              "src": "281:15:4"
             },
             "scope": 951,
-            "src": "234:54:4",
+            "src": "243:54:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -463,7 +463,7 @@
               "id": 939,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "308:2:4"
+              "src": "318:2:4"
             },
             "returnParameters": {
               "id": 942,
@@ -475,7 +475,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 943,
-                  "src": "334:13:4",
+                  "src": "344:13:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -486,7 +486,7 @@
                     "id": 940,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "334:6:4",
+                    "src": "344:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -496,10 +496,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "333:15:4"
+              "src": "343:15:4"
             },
             "scope": 951,
-            "src": "293:56:4",
+            "src": "303:56:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -523,7 +523,7 @@
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
                   "scope": 950,
-                  "src": "372:15:4",
+                  "src": "383:15:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -534,7 +534,7 @@
                     "id": 944,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "372:7:4",
+                    "src": "383:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -544,7 +544,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "371:17:4"
+              "src": "382:17:4"
             },
             "returnParameters": {
               "id": 949,
@@ -556,7 +556,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 950,
-                  "src": "412:13:4",
+                  "src": "423:13:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -567,7 +567,7 @@
                     "id": 947,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "412:6:4",
+                    "src": "423:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -577,23 +577,23 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "411:15:4"
+              "src": "422:15:4"
             },
             "scope": 951,
-            "src": "354:73:4",
+            "src": "365:73:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
         "scope": 952,
-        "src": "192:237:4"
+        "src": "200:241:4"
       }
     ],
-    "src": "0:430:4"
+    "src": "0:443:4"
   },
   "legacyAST": {
-    "absolutePath": "/home/krouspy/project/fragment-nft/contracts/ERC721/ERC721Metadata/IERC721Metadata.sol",
+    "absolutePath": "/C/Users/klau/Documents/fragment-nft/contracts/ERC721/ERC721Metadata/IERC721Metadata.sol",
     "exportedSymbols": {
       "IERC721Metadata": [
         951
@@ -614,13 +614,13 @@
         "src": "0:23:4"
       },
       {
-        "absolutePath": "/home/krouspy/project/fragment-nft/contracts/ERC721/ERC721/IERC721.sol",
+        "absolutePath": "/C/Users/klau/Documents/fragment-nft/contracts/ERC721/ERC721/IERC721.sol",
         "file": "../ERC721/IERC721.sol",
         "id": 931,
         "nodeType": "ImportDirective",
         "scope": 952,
         "sourceUnit": 740,
-        "src": "25:31:4",
+        "src": "27:31:4",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -634,7 +634,7 @@
               "name": "IERC721",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 739,
-              "src": "220:7:4",
+              "src": "228:7:4",
               "typeDescriptions": {
                 "typeIdentifier": "t_contract$_IERC721_$739",
                 "typeString": "contract IERC721"
@@ -642,7 +642,7 @@
             },
             "id": 933,
             "nodeType": "InheritanceSpecifier",
-            "src": "220:7:4"
+            "src": "228:7:4"
           }
         ],
         "contractDependencies": [
@@ -650,7 +650,7 @@
           2995
         ],
         "contractKind": "contract",
-        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\n@dev See https://eips.ethereum.org/EIPS/eip-721",
+        "documentation": "@title ERC-721 Non-Fungible Token Standard, optional metadata extension\r\n@dev See https://eips.ethereum.org/EIPS/eip-721\r",
         "fullyImplemented": false,
         "id": 951,
         "linearizedBaseContracts": [
@@ -674,7 +674,7 @@
               "id": 934,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "247:2:4"
+              "src": "256:2:4"
             },
             "returnParameters": {
               "id": 937,
@@ -686,7 +686,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 938,
-                  "src": "273:13:4",
+                  "src": "282:13:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -697,7 +697,7 @@
                     "id": 935,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "273:6:4",
+                    "src": "282:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -707,10 +707,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "272:15:4"
+              "src": "281:15:4"
             },
             "scope": 951,
-            "src": "234:54:4",
+            "src": "243:54:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -728,7 +728,7 @@
               "id": 939,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "308:2:4"
+              "src": "318:2:4"
             },
             "returnParameters": {
               "id": 942,
@@ -740,7 +740,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 943,
-                  "src": "334:13:4",
+                  "src": "344:13:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -751,7 +751,7 @@
                     "id": 940,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "334:6:4",
+                    "src": "344:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -761,10 +761,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "333:15:4"
+              "src": "343:15:4"
             },
             "scope": 951,
-            "src": "293:56:4",
+            "src": "303:56:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
@@ -788,7 +788,7 @@
                   "name": "tokenId",
                   "nodeType": "VariableDeclaration",
                   "scope": 950,
-                  "src": "372:15:4",
+                  "src": "383:15:4",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -799,7 +799,7 @@
                     "id": 944,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "372:7:4",
+                    "src": "383:7:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -809,7 +809,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "371:17:4"
+              "src": "382:17:4"
             },
             "returnParameters": {
               "id": 949,
@@ -821,7 +821,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 950,
-                  "src": "412:13:4",
+                  "src": "423:13:4",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -832,7 +832,7 @@
                     "id": 947,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "412:6:4",
+                    "src": "423:6:4",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -842,20 +842,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "411:15:4"
+              "src": "422:15:4"
             },
             "scope": 951,
-            "src": "354:73:4",
+            "src": "365:73:4",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
         "scope": 952,
-        "src": "192:237:4"
+        "src": "200:241:4"
       }
     ],
-    "src": "0:430:4"
+    "src": "0:443:4"
   },
   "compiler": {
     "name": "solc",
@@ -863,27 +863,27 @@
   },
   "networks": {},
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-03-01T22:30:09.545Z",
+  "updatedAt": "2020-03-02T12:26:09.437Z",
   "devdoc": {
-    "details": "See https://eips.ethereum.org/EIPS/eip-721",
+    "details": "See https://eips.ethereum.org/EIPS/eip-721\r",
     "methods": {
       "balanceOf(address)": {
-        "details": "Returns the number of NFTs in `owner`'s account."
+        "details": "Returns the number of NFTs in `owner`'s account.\r"
       },
       "ownerOf(uint256)": {
-        "details": "Returns the owner of the NFT specified by `tokenId`."
+        "details": "Returns the owner of the NFT specified by `tokenId`.\r"
       },
       "safeTransferFrom(address,address,uint256)": {
-        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to another (`to`).     *     * Requirements: - `from`, `to` cannot be zero. - `tokenId` must be owned by `from`. - If the caller is not `from`, it must be have been allowed to move this NFT by either {approve} or {setApprovalForAll}."
+        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to\r another (`to`).\r      *\r      * Requirements:\r - `from`, `to` cannot be zero.\r - `tokenId` must be owned by `from`.\r - If the caller is not `from`, it must be have been allowed to move this\r NFT by either {approve} or {setApprovalForAll}.\r"
       },
       "supportsInterface(bytes4)": {
-        "details": "Returns true if this contract implements the interface defined by `interfaceId`. See the corresponding https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section] to learn more about how these ids are created.     * This function call must use less than 30 000 gas."
+        "details": "Returns true if this contract implements the interface defined by\r `interfaceId`. See the corresponding\r https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[EIP section]\r to learn more about how these ids are created.\r      * This function call must use less than 30 000 gas.\r"
       },
       "transferFrom(address,address,uint256)": {
-        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to another (`to`).     * Requirements: - If the caller is not `from`, it must be approved to move this NFT by either {approve} or {setApprovalForAll}."
+        "details": "Transfers a specific NFT (`tokenId`) from one account (`from`) to\r another (`to`).\r      * Requirements:\r - If the caller is not `from`, it must be approved to move this NFT by\r either {approve} or {setApprovalForAll}.\r"
       }
     },
-    "title": "ERC-721 Non-Fungible Token Standard, optional metadata extension"
+    "title": "ERC-721 Non-Fungible Token Standard, optional metadata extension\r"
   },
   "userdoc": {
     "methods": {}
