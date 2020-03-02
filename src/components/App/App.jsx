@@ -17,7 +17,8 @@ import About from "../About";
 const style = {
   flexGrow: 1,
   display: "flex",
-  justifyContent: "center"
+  justifyContent: "center",
+  paddingTop: 80
 };
 
 export const App = () => {

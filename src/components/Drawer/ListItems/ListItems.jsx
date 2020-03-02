@@ -6,6 +6,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
+import AppIcon from "@material-ui/icons/Apps";
 
 const style = {
   textDecoration: "none",
@@ -23,6 +24,14 @@ export const ListItems = (
       </ListItem>
     </Link>
     <Link to="/claim/0" style={style}>
+      <ListItem button>
+        <ListItemIcon>
+          <AppIcon />
+        </ListItemIcon>
+        <ListItemText primary="Claim" />
+      </ListItem>
+    </Link>
+    <Link to="/what" style={style}>
       <ListItem button>
         <ListItemIcon>
           <InfoIcon />

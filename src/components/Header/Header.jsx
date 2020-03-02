@@ -26,15 +26,15 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.enteringScreen
     })
   },
-  toolbar: {
-    display: "flex",
-    justifyContent: "space-between"
-  },
   menuButton: {
     marginRight: 36
   },
   hide: {
     display: "none"
+  },
+  userAddress: {
+    marginLeft: "auto",
+    marginRight: 0
   }
 }));
 
@@ -48,7 +48,7 @@ export const Header = ({ open, handleOpen, tokenName, userAddress }) => {
         position="fixed"
         className={clsx(classes.appBar, { [classes.appBarShift]: open })}
       >
-        <Toolbar className={classes.toolbar}>
+        <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -63,7 +63,7 @@ export const Header = ({ open, handleOpen, tokenName, userAddress }) => {
           <Typography variant="h6" noWrap>
             {tokenName}
           </Typography>
-          <div>{userAddress}</div>
+          <div className={classes.userAddress}>{userAddress}</div>
         </Toolbar>
       </AppBar>
     </React.Fragment>
