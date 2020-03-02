@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => ({
   }
 }));
 
-export const Art = ({ fragmentClaimer }) => {
+export const Art = ({ web3, fragmentClaimer, ERC721 }) => {
   const classes = useStyles();
 
   return (
@@ -33,7 +33,9 @@ export const Art = ({ fragmentClaimer }) => {
           .map((_, index) => (
             <Row
               key={index}
+              web3={web3}
               fragmentClaimer={fragmentClaimer}
+              ERC721={ERC721}
               rowNumber={index}
             />
           ))}

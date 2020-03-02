@@ -3,7 +3,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Fragment from "#fragment";
 
-export const Half = ({ fragmentClaimer, rowNumber, firstHalf }) => {
+export const Half = ({ fragmentClaimer, ERC721, rowNumber, firstHalf }) => {
   return (
     <Grid container item xs={6}>
       {Array(12)
@@ -12,6 +12,7 @@ export const Half = ({ fragmentClaimer, rowNumber, firstHalf }) => {
           <Fragment
             key={index}
             fragmentClaimer={fragmentClaimer}
+            ERC721={ERC721}
             rowNumber={rowNumber}
             columnNumber={firstHalf ? index : index + 12}
             firstHalf={firstHalf}

@@ -38,10 +38,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export const Header = ({ open, handleOpen, userAddress }) => {
+export const Header = ({ open, handleOpen, tokenName, userAddress }) => {
   const classes = useStyles();
 
-  console.log(userAddress);
   return (
     <React.Fragment>
       <CssBaseline />
@@ -62,7 +61,7 @@ export const Header = ({ open, handleOpen, userAddress }) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Tokenizart
+            {tokenName}
           </Typography>
           <div>{userAddress}</div>
         </Toolbar>

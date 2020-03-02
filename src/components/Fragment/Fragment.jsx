@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
 import { serverURI } from "#root/config/config";
+
+import DialogInfo from "./DialogInfo";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -23,6 +21,7 @@ const useStyles = makeStyles(() => ({
 
 export const Fragment = ({
   fragmentClaimer,
+  ERC721,
   rowNumber,
   columnNumber,
   firstHalf
@@ -67,22 +66,20 @@ export const Fragment = ({
   }, [fragmentClaimer, firstHalf]);
 
   const handleOpen = () => {
-    if (!fragment.isClaimed) {
-      setOpen(!open);
-    }
+    setOpen(!open);
   };
 
-  const { number, url } = fragment;
+  const { number, isClaimed, url } = fragment;
 
   return (
     <Grid className={classes.root} item xs={1}>
       <img className={classes.image} onClick={handleOpen} src={url} />
-      <Dialog open={open} onClose={handleOpen}>
-        <DialogTitle>Fragment {number}</DialogTitle>
-        <DialogContent>
-          <DialogContentText>jsp gro</DialogContentText>
-        </DialogContent>
-      </Dialog>
+      <DialogInfo
+        open={open}
+        handleOpen={handleOpen}
+        fragmentNumber={number}
+        isClaimed={isClaimed}
+      />
     </Grid>
   );
 };
