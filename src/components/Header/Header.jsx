@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbar: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "space-between"
   },
   menuButton: {
     marginRight: 36
@@ -38,9 +38,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export const Header = ({ open, handleOpen }) => {
+export const Header = ({ open, handleOpen, userAddress }) => {
   const classes = useStyles();
 
+  console.log(userAddress);
   return (
     <React.Fragment>
       <CssBaseline />
@@ -48,7 +49,7 @@ export const Header = ({ open, handleOpen }) => {
         position="fixed"
         className={clsx(classes.appBar, { [classes.appBarShift]: open })}
       >
-        <Toolbar>
+        <Toolbar className={classes.toolbar}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -63,6 +64,7 @@ export const Header = ({ open, handleOpen }) => {
           <Typography variant="h6" noWrap>
             Tokenizart
           </Typography>
+          <div>{userAddress}</div>
         </Toolbar>
       </AppBar>
     </React.Fragment>

@@ -18,7 +18,8 @@ const style = {
 export const App = () => {
   const [data, setData] = useState({
     web3: null,
-    fragmentClaimer: null
+    fragmentClaimer: null,
+    userAddress: ""
   });
   const [open, setOpen] = useState(false);
 
@@ -26,12 +27,15 @@ export const App = () => {
     const init = async () => {
       try {
         const web3 = await getWeb3();
+        const accounts = await web3.eth.getAccounts();
+        const userAddress = accounts[0];
+        console.log(userAddress);
 
         const fragmentClaimer = new web3.eth.Contract(
           FragmentClaimerContract.abi,
           fragmentClaimerAddress
         );
-        setData({ web3, fragmentClaimer });
+        setData({ web3, fragmentClaimer, userAddress });
       } catch (e) {
         console.log(e);
       }
@@ -43,11 +47,11 @@ export const App = () => {
     setOpen(!open);
   };
 
-  const { web3, fragmentClaimer } = data;
+  const { web3, fragmentClaimer, userAddress } = data;
 
   return (
     <Router>
-      <Header open={open} handleOpen={handleOpen} />
+      <Header open={open} handleOpen={handleOpen} userAddress={userAddress} />
       <Drawer open={open} handleOpen={handleOpen} />
       <main style={style}>
         <Switch>
