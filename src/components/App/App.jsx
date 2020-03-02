@@ -9,6 +9,10 @@ import Home from "../Home";
 import Claim from "../Claim";
 import { fragmentClaimerAddress } from "#root/config/config";
 
+const style = {
+  flexGrow: 1
+};
+
 export const App = () => {
   const [data, setData] = useState({
     web3: null,
@@ -41,16 +45,18 @@ export const App = () => {
 
   return (
     <Router>
-      <Header />
+      <Header open={open} handleOpen={handleOpen} />
       <Drawer open={open} handleOpen={handleOpen} />
-      <Switch>
-        <Route exact path="/">
-          <Home web3={web3} fragmentClaimer={fragmentClaimer} />
-        </Route>
-        <Route exact path="/claim/:tokenNumber">
-          <Claim />
-        </Route>
-      </Switch>
+      <main style={style}>
+        <Switch>
+          <Route exact path="/">
+            <Home web3={web3} fragmentClaimer={fragmentClaimer} />
+          </Route>
+          <Route exact path="/claim/:tokenNumber">
+            <Claim />
+          </Route>
+        </Switch>
+      </main>
     </Router>
   );
 };

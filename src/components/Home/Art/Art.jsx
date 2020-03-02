@@ -6,6 +6,9 @@ import Paper from "@material-ui/core/Paper";
 import Row from "./Row";
 
 const useStyles = makeStyles(() => ({
+  paper: {
+    marginTop: 80
+  },
   content: {
     width: "65vw",
     height: "93vh",
@@ -17,7 +20,7 @@ export const Art = ({ fragmentClaimer }) => {
   const classes = useStyles();
 
   return (
-    <Paper elevation={3}>
+    <Paper className={classes.paper} elevation={3}>
       <Grid
         className={classes.content}
         container

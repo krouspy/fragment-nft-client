@@ -2,8 +2,7 @@ import React from "react";
 
 const style = {
   display: "flex",
-  justifyContent: "center",
-  marginTop: 5
+  justifyContent: "center"
 };
 
 export const Layout = ({ children }) => {
