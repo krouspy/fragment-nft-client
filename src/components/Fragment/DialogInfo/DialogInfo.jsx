@@ -12,7 +12,7 @@ export const DialogInfo = ({ open, handleOpen, fragmentNumber, isClaimed }) => {
   return (
     <Dialog open={open} onClose={handleOpen}>
       <DialogTitle>Fragment {fragmentNumber}</DialogTitle>
-      <DialogContent style={style}>
+      <DialogContent style={style} dividers>
         <h3>Status: {isClaimed ? "Claimed" : "Not Claimed"}</h3>
       </DialogContent>
     </Dialog>

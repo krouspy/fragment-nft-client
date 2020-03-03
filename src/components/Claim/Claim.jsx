@@ -14,6 +14,7 @@ import getWeb3 from "#root/getWeb3";
 import FragmentClaimerContract from "#contractAbis/fragmentClaimer";
 import { fragmentClaimerAddress, serverURI } from "#root/config/config";
 
+import DialogDescription from "./DialogDescription";
 import LabelText from "./LabelText";
 
 const useStyles = makeStyles(theme => ({
@@ -31,13 +32,13 @@ const useStyles = makeStyles(theme => ({
     width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(3)
   },
-  submit: {
-    margin: theme.spacing(3, 0, 2),
-    backgroundColor: "#28646e"
-  },
   etherIcon: {
     height: 23,
     width: 23
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+    backgroundColor: "#28646e"
   }
 }));
 
@@ -56,6 +57,7 @@ export const Claim = () => {
     signature: "",
     userAddress: ""
   });
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const init = async () => {
@@ -109,7 +111,7 @@ export const Claim = () => {
     init();
   }, []);
 
-  const handleClaim = async () => {
+  const claimToken = async () => {
     const { tokenNumber, uri, signature, userAddress } = fragment;
     const res = await fragmentClaimer.methods
       .claimAToken(Number(tokenNumber), uri, signature)
@@ -125,7 +127,11 @@ export const Claim = () => {
     setTips(event.target.value);
   };
 
-  const { tokenNumber, isClaimed, hash } = fragment;
+  const handleOpen = () => {
+    setOpen(!open);
+  };
+
+  const { tokenNumber, isClaimed, hash, signature } = fragment;
 
   return (
     <Container component="main" maxWidth="sm">
@@ -200,15 +206,25 @@ export const Claim = () => {
               />
             </Grid>
           </Grid>
-          <Button
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-            onClick={handleClaim}
-          >
-            Claim Token
-          </Button>
+          <div>
+            <Button
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              onClick={handleOpen}
+            >
+              See Description & Claim
+            </Button>
+            <DialogDescription
+              open={open}
+              handleOpen={handleOpen}
+              claimToken={claimToken}
+              tokenNumber={tokenNumber}
+              hash={hash}
+              signature={signature}
+            />
+          </div>
         </form>
       </div>
     </Container>
