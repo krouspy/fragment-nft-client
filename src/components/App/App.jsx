@@ -18,7 +18,8 @@ const style = {
   flexGrow: 1,
   display: "flex",
   justifyContent: "center",
-  paddingTop: 80
+  paddingTop: 80,
+  overflow: "auto"
 };
 
 export const App = () => {

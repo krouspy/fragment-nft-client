@@ -1,20 +1,23 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
+import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(() => ({
   root: {
-    display: "flex",
-    flexDirection: "column",
+    width: "65vw",
     marginTop: 150
   },
   title: {
-    fontWeight: "bold"
+    display: "flex",
+    flexDirection: "column"
   },
   warning: {
     color: "red",
     fontStyle: "italic"
+  },
+  span: {
+    fontWeight: "bold"
   }
 }));
 
@@ -22,25 +25,27 @@ export const About = () => {
   const classes = useStyles();
 
   return (
-    <Container className={classes.root}>
-      <Typography component="h6" className={classes.title} gutterBottom>
+    <Paper className={classes.root}>
+      <Typography className={classes.title} gutterBottom>
         <ul>
           <li>
-            TL;PL
+            <span className={classes.span}>TL;PL</span>
             <br />
             Each individual frame is a physical representation of a mathematical
             artifact that is ubiquitous in our daily lives, without us realizing
             it.
           </li>
+          <br />
           <li>
-            Finding paths
+            <span className={classes.span}>Finding paths</span>
             <br />
             The original image is converted to black and white and is then
             transformed into a list of points that the path must visit. For
             darker parts of the image, there are more points to visits.
           </li>
+          <br />
           <li>
-            Optimising
+            <span className={classes.span}>Optimising</span>
             <br />
             Then the path needs to visit all the points. To do this optimally,
             it is then a question of solving what is called “the travelling
@@ -48,8 +53,9 @@ export const About = () => {
             group of 20 cities. How to find the ideal route, which will allow
             him to spend as little time as possible on the road?
           </li>
+          <br />
           <li>
-            The itinerant traveler
+            <span className={classes.span}>The itinerant traveler</span>
             <br />
             The description of this problem can be identified as early as the
             19th century, and its first formulation in mathematical terms dates
@@ -58,8 +64,9 @@ export const About = () => {
             optimization problem, which appears very regularly in the design of
             complex systems.
           </li>
+          <br />
           <li>
-            In your everyday life
+            <span className={classes.span}>In your everyday life</span>
             <br />
             Today, TSP solving algorithms are still a thriving area of
             ​​mathematical research. They are present in most of the information
@@ -69,6 +76,6 @@ export const About = () => {
           </li>
         </ul>
       </Typography>
-    </Container>
+    </Paper>
   );
 };
