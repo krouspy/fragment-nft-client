@@ -77,6 +77,7 @@ export const Fragment = ({
       <DialogInfo
         ERC721={ERC721}
         open={open}
+        url={url}
         handleOpen={handleOpen}
         fragmentNumber={number}
         isClaimed={isClaimed}
