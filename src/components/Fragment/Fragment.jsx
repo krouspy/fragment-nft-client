@@ -15,7 +15,7 @@ const useStyles = makeStyles(() => ({
     height: "97.5%",
     cursor: "pointer",
     objectFit: "cover",
-    opacity: props.isClaimed ? 1 : 0.5
+    opacity: props.isClaimed ? 1 : 0.4
   })
 }));
 
@@ -73,7 +73,7 @@ export const Fragment = ({
 
   return (
     <Grid className={classes.root} item xs={1}>
-      <img className={classes.image} onClick={handleOpen} src={url} />
+      <img className={classes.image} onClick={handleOpen} src={url} alt="" />
       <DialogInfo
         open={open}
         handleOpen={handleOpen}
