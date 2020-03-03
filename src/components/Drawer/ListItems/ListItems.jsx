@@ -8,9 +8,13 @@ import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
 import AppIcon from "@material-ui/icons/Apps";
 
-const style = {
+const linkStyle = {
   textDecoration: "none",
-  color: "inherit"
+  color: "#ffffff"
+};
+
+const iconStyle = {
+  color: "#ffffff"
 };
 
 const path =
@@ -18,26 +22,26 @@ const path =
 
 export const ListItems = (
   <List>
-    <Link to="/" style={style}>
+    <Link to="/" style={linkStyle}>
       <ListItem button>
         <ListItemIcon>
-          <HomeIcon />
+          <HomeIcon style={iconStyle} />
         </ListItemIcon>
         <ListItemText primary="Home" />
       </ListItem>
     </Link>
-    <Link to={path} style={style}>
+    <Link to={path} style={linkStyle}>
       <ListItem button>
         <ListItemIcon>
-          <AppIcon />
+          <AppIcon style={iconStyle} />
         </ListItemIcon>
         <ListItemText primary="Claim" />
       </ListItem>
     </Link>
-    <Link to="/what" style={style}>
+    <Link to="/what" style={linkStyle}>
       <ListItem button>
         <ListItemIcon>
-          <InfoIcon />
+          <InfoIcon style={iconStyle} />
         </ListItemIcon>
         <ListItemText primary="About" />
       </ListItem>
