@@ -6,12 +6,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles(theme => ({
-  dialog: {
-    minWidth: "50vw"
-  },
   dialogContent: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    minWidth: "20vw"
   },
   row: {
     margin: theme.spacing(1)
@@ -22,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1)
   },
   image: {
-    height: 50,
+    height: 70,
     width: "auto",
     marginLeft: 10
   },
@@ -54,12 +52,7 @@ export const DialogInfo = ({
   }, [isClaimed]);
 
   return (
-    <Dialog
-      className={classes.dialog}
-      open={open}
-      onClose={handleOpen}
-      maxWidth="md"
-    >
+    <Dialog open={open} onClose={handleOpen} maxWidth="md">
       <DialogTitle>Fragment {fragmentNumber}</DialogTitle>
       <DialogContent className={classes.dialogContent} dividers>
         <Typography className={classes.row}>

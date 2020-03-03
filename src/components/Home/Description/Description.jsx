@@ -24,7 +24,7 @@ export const Description = () => {
       <br />
       <br />
       <br />
-      <Typography className={classes.title} gutterBottom>
+      <Typography variant="h6" className={classes.title} gutterBottom>
         The fragment you are holding is part of a picture that was taken a year
         ago in Paris, during ETHCC2019.
         <br />
