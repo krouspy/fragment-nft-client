@@ -64,7 +64,7 @@ export const Header = ({ open, handleOpen, tokenName, userAddress }) => {
           <Typography variant="h6" noWrap>
             {tokenName}
           </Typography>
-          <div className={classes.userAddress}>{userAddress}</div>
+          <div className={classes.userAddress}>You: {userAddress}</div>
         </Toolbar>
       </AppBar>
     </React.Fragment>
