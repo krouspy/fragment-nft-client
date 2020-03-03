@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 
 import Art from "./Art";
-import Description from "./Description";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -19,7 +18,6 @@ export const Home = ({ fragmentClaimer, ERC721 }) => {
 
   return (
     <Paper className={classes.root}>
-      <Description />
       <Art fragmentClaimer={fragmentClaimer} ERC721={ERC721} />
     </Paper>
   );
