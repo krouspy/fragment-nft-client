@@ -89,6 +89,7 @@ export const Claim = () => {
 
         const params = location.search.split("=");
         const hash = params[1].split("&")[0];
+        console.log(hash);
         const signature = params[2];
 
         const fragmentName = getFragmentName();
@@ -112,15 +113,26 @@ export const Claim = () => {
   }, []);
 
   const claimToken = async () => {
-    const { tokenNumber, uri, signature, userAddress } = fragment;
-    const res = await fragmentClaimer.methods
-      .claimAToken(Number(tokenNumber), uri, signature)
-      .send({
-        from: userAddress,
-        value: web3.utils.toWei(tips.toString(), "ether"),
-        gas: web3.utils.toWei("0.00000000000025", "ether")
-      });
-    console.log(res);
+    const { tokenNumber, uri, hash, signature, userAddress } = fragment;
+    console.log("hash", hash);
+    if (tips) {
+      const res = await fragmentClaimer.methods
+        .claimAToken(Number(tokenNumber), hash, signature)
+        .send({
+          from: userAddress,
+          value: web3.utils.toWei(tips.toString(), "ether"),
+          gas: web3.utils.toWei("0.00000000000025", "ether")
+        });
+      console.log(res);
+    } else {
+      const res = await fragmentClaimer.methods
+        .claimAToken(Number(tokenNumber), hash, signature)
+        .send({
+          from: userAddress,
+          gas: web3.utils.toWei("0.00000000000025", "ether")
+        });
+      console.log(res);
+    }
   };
 
   const handleTips = event => {
