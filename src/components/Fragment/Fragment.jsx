@@ -75,6 +75,7 @@ export const Fragment = ({
     <Grid className={classes.root} item xs={1}>
       <img className={classes.image} onClick={handleOpen} src={url} alt="" />
       <DialogInfo
+        ERC721={ERC721}
         open={open}
         handleOpen={handleOpen}
         fragmentNumber={number}
